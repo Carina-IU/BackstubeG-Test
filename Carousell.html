@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title>Unsere Bäcker | Backstube Goldkorn</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="icon" href="images/logo.png" type="image/png">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+
+					<!-- Logo -->
+					<a href="index.html" class="logo">
+						<span class="symbol"><img src="images/logo.png" alt="" /></span><span class="title">Backstube Goldkorn</span>
+					</a>
+
+					<!-- Nav -->
+					<nav>
+						<ul>
+							<li><a href="#menu">Menu</a></li>
+						</ul>
+					</nav>
+
+				</div>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Geschichte.html">Unsere Geschichte</a></li>
+					<li><a href="Tradition.html">Tradition und Werte</a></li>
+					<li><a href="Sortiment.html">Unser Sortiment</a></li>
+					<li><a href="Baecker.html">Unsere Bäcker</a></li>
+					<li><a href="Saison.html">Saisonale Highlights</a></li>
+					<li><a href="Aktion.html">Veranstaltungen und Aktionen</a></li>
+					<li><a href="Engagement.html">Regionale Partnerschaft und Enagement</a></li>
+					<li><a href="Rezessionen.html">Kundenrezessionen</a></li>
+					<li><a href="Kontakt.html">Kontakt und Standorte</a></li>
+					<li><a href="Impressum.html">Impressum und Datenschutz</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<style>
+				body {
+					font-family: Arial, sans-serif;
+					background-color: #f4f4f4;
+					color: #333;
+					line-height: 1.6;
+					margin: 0;
+					padding: 0;
+				}
+
+				.container {
+					max-width: 1200px;
+					margin: 20px auto;
+					padding: 20px;
+					background-color: #fff;
+					border-radius: 10px;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+					position: relative;
+					overflow: hidden;
+				}
+
+				.bakery-grid {
+					display: flex;
+					gap: 20px;
+					transition: transform 0.5s ease-in-out;
+					animation: carouselMove 20s linear infinite; /* Animation für die kontinuierliche Schleife */
+				}
+
+				.bakery-item {
+					background-color: #ffffff;
+					border: 1px solid #ddd;
+					border-radius: 10px;
+					overflow: hidden;
+					flex: 1 0 100%; /* Feste Breite für jedes Item */
+					max-width: calc(33.333% - 20px); /* Maximal 33.333% der Breite */
+					display: flex;
+					flex-direction: column;
+				}
+
+					.bakery-item img {
+						width: 100%;
+						height: auto;
+						border-top-left-radius: 10px;
+						border-top-right-radius: 10px;
+						object-fit: cover;
+					}
+
+					.bakery-item .content {
+						padding: 15px;
+						text-align: left;
+					}
+
+						.bakery-item .content h3 {
+							margin: 0;
+							font-size: 1.5rem;
+							color: #333;
+						}
+
+						.bakery-item .content p {
+							margin: 10px 0 0;
+							color: #666;
+						}
+
+				/* Carousel Controls (optional, für manuelle Steuerung) */
+				.carousel-controls {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+
+				.control-btn {
+					background-color: rgba(255, 255, 255, 0.8);
+					color: #333;
+					border: none;
+					padding: 10px;
+					cursor: pointer;
+					transition: background-color 0.3s ease;
+				}
+
+					.control-btn:hover {
+						background-color: rgba(0, 0, 0, 0.1);
+					}
+
+				/* Animation für die kontinuierliche Schleife */
+				@keyframes carouselMove {
+					0% {
+						transform: translateX(0);
+					}
+
+					100% {
+						transform: translateX(-200%);
+					}
+					/* Bewegt sich um die doppelte Breite, um sicherzustellen, dass alle Bäckereien durchlaufen werden */
+				}
+
+				/* Hide overflow for responsive design */
+				@media (max-width: 768px) {
+					.container {
+						overflow-x: auto;
+					}
+
+					.bakery-grid {
+						flex-wrap: nowrap;
+					}
+				}
+			</style>
+			</head>
+			<body>
+
+				<div class="container">
+					<h1 style="text-align: center;">Bäckereien Carousel</h1>
+					<div class="bakery-grid">
+						<div class="bakery-item">
+							<img src="images/Baecker1.jpg" alt="Bäckerei 1">
+							<div class="content">
+								<h3>Bäckerei 1</h3>
+								<p>Beschreibung der Bäckerei 1. Diese Bäckerei bietet eine große Auswahl an frischen Backwaren und Spezialitäten.</p>
+							</div>
+						</div>
+						<div class="bakery-item">
+							<img src="images/Baecker2.jpg" alt="Bäckerei 2">
+							<div class="content">
+								<h3>Bäckerei 2</h3>
+								<p>Beschreibung der Bäckerei 2. Diese Bäckerei ist bekannt für ihre leckeren Kuchen und Torten.</p>
+							</div>
+						</div>
+						<div class="bakery-item">
+							<img src="images/Baecker3.jpg" alt="Bäckerei 3">
+							<div class="content">
+								<h3>Bäckerei 3</h3>
+								<p>Beschreibung der Bäckerei 3. Hier finden Sie traditionelle Brote und Gebäck.</p>
+							</div>
+						</div>
+						<div class="bakery-item">
+							<img src="images/Baecker4.jpg" alt="Bäckerei 4">
+							<div class="content">
+								<h3>Bäckerei 4</h3>
+								<p>Beschreibung der Bäckerei 4. Besondere Spezialitäten und freundlicher Service.</p>
+							</div>
+						</div>
+						<div class="bakery-item">
+							<img src="images/Baecker5.jpg" alt="Bäckerei 5">
+							<div class="content">
+								<h3>Bäckerei 5</h3>
+								<p>Beschreibung der Bäckerei 5. Berühmt für hausgemachte Kekse und Gebäck.</p>
+							</div>
+						</div>
+						<div class="bakery-item">
+							<img src="images/Baecker1.jpg" alt="Bäckerei 1">
+							<div class="content">
+								<h3>Bäckerei 1</h3>
+								<p>Beschreibung der Bäckerei 1. Diese Bäckerei bietet eine große Auswahl an frischen Backwaren und Spezialitäten.</p>
+							</div>
+						</div>
+						<div class="bakery-item">
+							<img src="images/Baecker2.jpg" alt="Bäckerei 2">
+							<div class="content">
+								<h3>Bäckerei 2</h3>
+								<p>Beschreibung der Bäckerei 2. Diese Bäckerei ist bekannt für ihre leckeren Kuchen und Torten.</p>
+							</div>
+						</div>
+						<div class="bakery-item">
+							<img src="images/Baecker3.jpg" alt="Bäckerei 3">
+							<div class="content">
+								<h3>Bäckerei 3</h3>
+								<p>Beschreibung der Bäckerei 3. Hier finden Sie traditionelle Brote und Gebäck.</p>
+							</div>
+						</div>
+						<div class="bakery-item">
+							<img src="images/Baecker4.jpg" alt="Bäckerei 4">
+							<div class="content">
+								<h3>Bäckerei 4</h3>
+								<p>Beschreibung der Bäckerei 4. Besondere Spezialitäten und freundlicher Service.</p>
+							</div>
+						</div>
+						<div class="bakery-item">
+							<img src="images/Baecker5.jpg" alt="Bäckerei 5">
+							<div class="content">
+								<h3>Bäckerei 5</h3>
+								<p>Beschreibung der Bäckerei 5. Berühmt für hausgemachte Kekse und Gebäck.</p>
+							</div>
+						</div>
+						<!-- Weitere Bäckereien -->
+					</div>
+				</div>
+
+			</body>
+
+			<script>
+				let currentIndex = 0;
+				const items = document.querySelectorAll('.bakery-item');
+				const totalItems = items.length;
+				const container = document.querySelector('.bakery-grid');
+				const itemWidth = items[0].clientWidth + 20; // Breite des Items inkl. Margin
+
+				function moveCarousel(direction) {
+					currentIndex = (currentIndex + direction + totalItems) % totalItems;
+					const translateValue = `translateX(-${currentIndex * itemWidth}px)`;
+					container.style.transform = translateValue;
+				}
+			</script>
+
+</body>
+
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<h2>Buchen Sie uns jetzt!</h2>
+						<form method="post" action="#" id="emailForm">
+							<div class="fields">
+								<div class="field half">
+									<input type="text" name="name" id="name" placeholder="Name" required />
+								</div>
+								<div class="field half">
+									<input type="email" name="email" id="email" placeholder="Email" required />
+								</div>
+								<div class="field">
+									<textarea name="Nachricht" id="Nachricht" placeholder="Nachricht" required></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Senden" class="primary" /></li>
+							</ul>
+						</form>
+					</section>
+					<script src="email.js"></script>
+					<section>
+						<h2>Folgt uns auf</h2>
+						<ul class="icons">
+							<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+							<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</section>
+					<selection>
+
+						<ul class="copyright">
+							<li>&copy; Backstube Goldkorn. All rights reserved</li>
+							<li><a href="Impressum.html">Impressum und Datenschutz</a></li>
+
+						</ul>
+				</div>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

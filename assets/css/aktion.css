@@ -1,0 +1,97 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0; /* Hintergrundfarbe */
+    color: #333; /* Textfarbe */
+    margin: 0;
+    padding: 0;
+}
+
+.timeline {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.timeline-title {
+    font-size: 36px; /* Große Überschrift */
+    margin-bottom: 30px;
+    color: #333; /* Textfarbe für Überschrift */
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-icon {
+    flex: 0 0 auto;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333; /* Hintergrundfarbe für Icon */
+    color: #fff; /* Textfarbe für Icon */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+    .timeline-icon i {
+        font-size: 24px;
+    }
+
+.timeline-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff; /* Hintergrundfarbe für Inhalt */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+    .timeline-content h3 {
+        margin-top: 0;
+        color: #333; /* Textfarbe für Überschrift */
+    }
+
+    .timeline-content p {
+        margin-bottom: 0;
+        color: #666; /* Textfarbe für Inhalt */
+    }
+
+@media screen and (max-width: 768px) {
+    .timeline {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+/* Standard-Stile für die Timeline-Elemente */
+.timeline-item {
+    background-color: #f0f0f0; /* Standard-Hintergrundfarbe */
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Übergang für Animation */
+}
+
+    /* Hover-Effekt für die Timeline-Elemente */
+    .timeline-item:hover {
+        transform: scale(1.05); /* Vergrößern der Box im Hover-Zustand */
+        background-color: #ffe6cc; /* Farbe im Hover-Zustand */
+    }
+
+
+    /* Farben für jedes Timeline-Element im Hover-Zustand */
+    .timeline-item:nth-child(odd):hover {
+        background-color: #cbe7ff; /* Farbe für gerade nummerierte Elemente */
+    }
+
+    .timeline-item:nth-child(even):hover {
+        background-color: #fbe270; /* Farbe für ungerade nummerierte Elemente */
+    }
+

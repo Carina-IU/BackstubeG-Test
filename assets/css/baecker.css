@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.item {
+    display: flex;
+    align-items: center; /* Vertikale Zentrierung */
+    margin-bottom: 50px; /* Abstand zwischen den Boxen auf 50px erhöht */
+    overflow: hidden; /* Clear float */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .item:hover {
+        transform: scale(1.05); /* Vergrößern des Elements beim Hover */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Leichter Schatten beim Hover */
+    }
+
+    .item .left, .item .right {
+        flex: 1;
+        padding: 50px; /* Abstand zwischen Text und Kante der Box */
+        text-align: center; /* Text zentriert ausrichten */
+       
+    }
+
+        .item .left img, .item .right img {
+            max-width: 100%;
+            max-height: 400px; /* Maximale Höhe für Porträtbilder erhöht */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+    .item .left {
+        padding-right: 10px; /* Reduziertes Padding auf der rechten Seite */
+    }
+
+    .item .right {
+        padding-left: 10px; /* Reduziertes Padding auf der linken Seite */
+    }
+
+    .item h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .item p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 10px; /* Kleinerer Abstand zwischen Überschrift und Text */
+    }
+
+audio {
+    margin-top: 10px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .item {
+        flex-direction: column;
+        margin-bottom: 50px; /* Abstand zwischen den gestapelten Elementen */
+    }
+
+        .item .left img, .item .right img {
+            max-width: 100%;
+            max-height: 400px; /* Maximale Höhe für Porträtbilder erhöht */
+            margin-bottom: 10px;
+        }
+
+        .item .left, .item .right {
+            padding: 10px; /* Gleichmäßiges Padding für kleinere Bildschirme */
+           
+        }
+}
