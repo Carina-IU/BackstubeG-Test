@@ -149,8 +149,26 @@ body {
 
 .left-button {
     left: 20px; /* Abstand von 1 cm vom linken Rand */
+    position: absolute;
 }
 
 .right-button {
     right: 20px; /* Abstand von 1 cm vom rechten Rand */
+    position: absolute;
+}
+
+
+.swiper-container {
+    width: 100%;
+    height: 300px; /* Höhe anpassen */
+    margin: 20px auto; /* Beispiel: zentriert auf der Seite */
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
