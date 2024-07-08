@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event Listener für Scroll-Buttons
     leftButton.addEventListener("click", function () {
         scrollLeft();
+        
     });
 
     rightButton.addEventListener("click", function () {

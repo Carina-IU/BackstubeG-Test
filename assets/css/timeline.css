@@ -25,7 +25,6 @@ body {
     width: fit-content; /* Anpassung der Breite an den Inhalt */
     margin: 0 auto; /* Zentrierung der Timeline-Elemente */
 }
-
 .timeline-item {
     position: relative;
     flex: 0 0 auto;
@@ -42,24 +41,27 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für die Karten */
 }
 
-.image-container {
-    position: relative;
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* Grauer Hintergrund mit Transparenz */
-    opacity: 1; /* Standardmäßig vollständig sichtbar */
-}
 
 
-    .image-overlay:hover {
-        background-color: rgba(255, 255, 255, 0); /* Transparente Hintergrundfarbe bei Hover */
+
+    .image-container {
+        position: relative;
     }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8); /* Grauer Hintergrund mit Transparenz */
+        opacity: 1; /* Standardmäßig vollständig sichtbar */
+    }
+
+
+        .image-overlay:hover {
+            background-color: rgba(255, 255, 255, 0); /* Transparente Hintergrundfarbe bei Hover */
+        }
 
 
     .timeline-item img {
@@ -79,96 +81,146 @@ body {
             transform: scale(1.2); /* Bild vergrößern */
         }
 
-.timeline-text {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 2; /* Text über Bild legen */
-}
+    .timeline-text {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2; /* Text über Bild legen */
+    }
 
-.timeline-item:hover .timeline-text {
-    opacity: 1; /* Text einblenden */
-}
-
-
-
-.timeline-year {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: rgba(255, 255, 255, 0.8); /* Weiß mit Transparenz */
-    z-index: 2; /* Überlappung sicherstellen */
-}
-
-.timeline-description {
-  /*Schatten der textbox*/
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    top: 75px;
-    background-color: rgba(0, 0, 0, 0.7); /* Halbtransparenter Hintergrund */
-    color: white;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 2; /* Überlappung sicherstellen */
-    border-radius: 5px; /* Abgerundete Ecken */
-}
-
-.timeline-item:hover .timeline-description {
-    opacity: 1; /* Beschreibung einblenden */
- 
-}
+    .timeline-item:hover .timeline-text {
+        opacity: 1; /* Text einblenden */
+    }
 
 
-.fade-out {
-    opacity: 0.5; /* Halb ausgeblendeter Zustand */
-}
 
-.scroll-button {
-    position: absolute;
-    width: 30px;
-    height: -50px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    z-index: 1;
-    bottom: 20px; /* 1 cm unterhalb der Bilder */
-}
+    .timeline-year {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        color: rgba(255, 255, 255, 0.8); /* Weiß mit Transparenz */
+        z-index: 2; /* Überlappung sicherstellen */
+    }
+
+    .timeline-description {
+        /*Schatten der textbox*/
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        top: 75px;
+        background-color: rgba(0, 0, 0, 0.7); /* Halbtransparenter Hintergrund */
+        color: white;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2; /* Überlappung sicherstellen */
+        border-radius: 5px; /* Abgerundete Ecken */
+    }
+
+    .timeline-item:hover .timeline-description {
+        opacity: 1; /* Beschreibung einblenden */
+    }
+
+
+    .fade-out {
+        opacity: 0.5; /* Halb ausgeblendeter Zustand */
+    }
+
+    .scroll-button {
+        position: absolute;
+        width: 30px;
+        height: -50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        z-index: 1;
+        bottom: 20px; /* 1 cm unterhalb der Bilder */
+    }
 
 .left-button {
     left: 20px; /* Abstand von 1 cm vom linken Rand */
     position: absolute;
+    bottom: -220px;
 }
 
 .right-button {
     right: 20px; /* Abstand von 1 cm vom rechten Rand */
     position: absolute;
+    bottom: -220px;
 }
 
 
-.swiper-container {
-    width: 100%;
-    height: 300px; /* Höhe anpassen */
-    margin: 20px auto; /* Beispiel: zentriert auf der Seite */
+    .swiper-container {
+        width: 100%;
+        height: 300px; /* Höhe anpassen */
+        margin: 20px auto; /* Beispiel: zentriert auf der Seite */
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .indicator{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px
+    }
+
+
+@media (max-width: 400px) {
+    .timeline-item {
+        width: 100%; /* Set width to 100% when screen width is less than 400px */
+        height: 85%;
+    }
 }
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media (max-width: 400px) {
+    .image-overlay {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
+
+@media (max-width: 400px) {
+    .timeline-description {
+        opacity: 1; /* Beschreibung einblenden */
+    }
+    .left-button {
+        left: 20px; /* Abstand von 1 cm vom linken Rand */
+        position: absolute;
+        bottom: -380px;
+    }
+
+    .right-button {
+        right: 20px; /* Abstand von 1 cm vom rechten Rand */
+        position: absolute;
+        bottom: -380px;
+    }
+}
+
+
+
+
+
+
+  

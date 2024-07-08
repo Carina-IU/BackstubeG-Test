@@ -49,7 +49,7 @@
 					<li><a href="Impressum.html">Impressum und Datenschutz</a></li>
 				</ul>
 			</nav>
-
+		
 
 			<!-- Main -->
 			<section id="main" class="wrapper">
@@ -144,15 +144,31 @@
 			</section>
 
 			<script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    const sections = document.querySelectorAll(".highlights section");
+    document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".highlights section");
 
-                    sections.forEach(section => {
-                        section.addEventListener("click", () => {
-                            section.classList.toggle("expanded");
-                        });
-                    });
-                });
+        sections.forEach(section => {
+            section.addEventListener("click", () => {
+                section.classList.toggle("expanded");
+
+                // Nachdem die Klasse expanded umgeschaltet wurde, überprüfen Sie die Höhe erneut
+                if (section.classList.contains("expanded")) {
+                    section.style.maxHeight = 'none'; // Aufheben der Höhenbegrenzung
+                } else {
+                    section.style.maxHeight = ''; // Zurücksetzen auf den Standardwert
+                }
+            });
+        });
+
+        // Prüfen der Bildschirmgröße beim Laden der Seite
+        if (window.matchMedia('(max-width: 400px)').matches) {
+            // Aktionen, um die Klasse oder Eigenschaften dauerhaft zu setzen
+            sections.forEach(section => {
+                section.style.maxHeight = 'none'; // Aufheben der Höhenbegrenzung
+                section.classList.add("expanded"); // Klasse hinzufügen, um sie dauerhaft als expanded zu markieren
+            });
+        }
+    });
 			</script>
 
 			<!-- Footer -->

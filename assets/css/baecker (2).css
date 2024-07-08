@@ -27,6 +27,7 @@ body {
         flex: 1;
         padding: 50px; /* Abstand zwischen Text und Kante der Box */
         text-align: center; /* Text zentriert ausrichten */
+       
     }
 
         .item .left img, .item .right img {
@@ -56,7 +57,26 @@ body {
         margin-bottom: 10px; /* Kleinerer Abstand zwischen Überschrift und Text */
     }
 
-/* ITEM MOBILE CONFIG ########################################################################################################################################################################################*/
+
+
+@media (max-width: 768px) {
+    .item {
+        flex-direction: column;
+        margin-bottom: 50px; /* Abstand zwischen den gestapelten Elementen */
+    }
+
+        .item .left img, .item .right img {
+            max-width: 100%;
+            max-height: 400px; /* Maximale Höhe für Porträtbilder erhöht */
+            margin-bottom: 10px;
+        }
+
+        .item .left, .item .right {
+            padding: 10px; /* Gleichmäßiges Padding für kleinere Bildschirme */
+           
+        }
+}
+
 .item-mobile {
     display: none;
 }
@@ -109,7 +129,11 @@ body {
         }
 }
 
-/* ITEM WEB CONFIG ##########################################################################################################################################################################################*/
+
+}
+
+/*-------------------------------------------------------------------------------------*/
+
 .item-web {
     display: none;
 }
@@ -159,49 +183,5 @@ body {
             font-size: 1rem;
             line-height: 1.6;
             margin-bottom: 10px; /* Kleinerer Abstand zwischen Überschrift und Text */
-        }
-}
-
-/* END CUSTOM CONFIG ########################################################################################################################################################################################*/
-
-audio {
-    margin-top: 10px;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .item {
-        flex-direction: column;
-        margin-bottom: 50px; /* Abstand zwischen den gestapelten Elementen */
-    }
-
-        .item .left img, .item .right img {
-            max-width: 100%;
-            max-height: 400px; /* Maximale Höhe für Porträtbilder erhöht */
-            margin-bottom: 10px;
-        }
-
-        .item .left, .item .right {
-            padding: 10px; /* Gleichmäßiges Padding für kleinere Bildschirme */
-        }
-}
-
-/* CUSTOM CONFIG TABLET ####################################################################################################################################################################################*/
-
-
-@media (max-width: 768px) {
-    .item-mobile {
-        flex-direction: column;
-        margin-bottom: 50px; /* Abstand zwischen den gestapelten Elementen */
-    }
-
-        .item-mobile .left img, .item-mobile .right img {
-            max-width: 100%;
-            max-height: 400px; /* Maximale Höhe für Porträtbilder erhöht */
-            margin-bottom: 10px;
-        }
-
-        .item-mobile .left, .item-mobile .right {
-            padding: 10px; /* Gleichmäßiges Padding für kleinere Bildschirme */
         }
 }
